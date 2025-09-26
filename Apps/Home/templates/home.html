@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+ 
+  <nav>
+          <a href= "{% url 'Home:homeapp' %}">Home</a> |
+        <a href= "{% url 'Home:estudiantesapp' %}">Estudiantes</a> |
+        <a href= "{% url 'Home:adminapp' %}">Administradores</a> |
+        <a href= "{% url 'Home:acercaapp' %}">Acerca de</a>
+  </nav>
+  <hr>
+
+  
+{% endblock %}
+
