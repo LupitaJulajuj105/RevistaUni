@@ -4,14 +4,34 @@
 <body>
 
   <nav>
-     <nav>
-        <a href= "{% url 'Home:homeapp' %}">Home</a> |
-        <a href= "{% url 'Home:videoapp' %}">Estudiantes</a> |
-        <a href= "{% url 'Home:usuarioapp' %}">Administradores</a> |
-    
-  </nav>
+    <a href="{% url 'Home:homeapp' %}">Home</a> |
+    <a href="{% url 'Home:videoapp' %}">Estudiantes</a> |
+    <a href="{% url 'Home:usuarioapp' %}">Administradores</a> |
   </nav>
   <hr>
 
-  
+  <h2>Lista de Videos</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Duración</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for video in videos %}
+      <tr>
+        <td>{{ video.titulo }}</td>
+        <td>{{ video.duracion }}</td>
+        <td>{{ video.descripcion }}</td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="3">No hay videos disponibles.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
 {% endblock %}

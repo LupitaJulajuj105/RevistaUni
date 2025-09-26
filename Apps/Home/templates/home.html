@@ -2,15 +2,23 @@
 
 {% block contenido %}
 
- 
   <nav>
-          <a href= "{% url 'Home:homeapp' %}">Home</a> |
-        <a href= "{% url 'Home:estudiantesapp' %}">Estudiantes</a> |
-        <a href= "{% url 'Home:adminapp' %}">Administradores</a> |
-        <a href= "{% url 'Home:acercaapp' %}">Acerca de</a>
+    <a href="{% url 'Home:homeapp' %}">Home</a> |
+    <a href="{% url 'Home:estudiantesapp' %}">Estudiantes</a> |
+    <a href="{% url 'Home:adminapp' %}">Administradores</a> |
+    <a href="{% url 'Home:acercaapp' %}">Acerca de</a>
   </nav>
   <hr>
 
-  
+  <h1>Bienvenidos a la Plataforma de Gestión de Videos</h1>
+  <p>Esta aplicación permite gestionar estudiantes, administradores y videos educativos de manera eficiente. Navega por el menú para comenzar a explorar las funcionalidades.</p>
+
+  <hr>
+  <footer>
+    <p><strong>Autor:</strong> Maria Guadalupe Julajuj</p>
+    <p><strong>Carné:</strong> 090 19 13178</p>
+  </footer>
+
 {% endblock %}
+
 
